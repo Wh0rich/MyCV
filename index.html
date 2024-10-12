@@ -43,13 +43,37 @@
             text-align: center;
             color: #007bff;
         }
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #007bff;
+            margin-bottom: 20px;
+        }
+        @media (min-width: 768px) {
+            .profile-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .profile-info {
+                margin-left: 30px;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <header class="text-center mb-5">
-            <h1 class="display-4 fw-bold">Suphat Khamkhi</h1>
-            <p class="lead">Game Developer</p>
+            <div class="profile-section">
+                <img src="path/to/your/profile-picture.jpg" alt="Suphat Khamkhi" class="profile-picture">
+                <div class="profile-info">
+                    <h1 class="display-4 fw-bold">Suphat Khamkhi</h1>
+                    <p class="lead">Game Developer</p>
+                </div>
+            </div>
         </header>
 
         <section id="about" class="mb-5">
@@ -58,7 +82,7 @@
         </section>
 
         <section id="experience" class="mb-5">
-            <h2 class="section-title">Work Experience</h2>
+            <h2 class="section-title">Experience</h2>
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-briefcase me-2"></i>Senior Web Developer</h5>
@@ -97,21 +121,18 @@
         <section id="skills" class="mb-5">
             <h2 class="section-title">Skills</h2>
             <div>
-                <span class="skill-badge">HTML5</span>
-                <span class="skill-badge">CSS3</span>
-                <span class="skill-badge">JavaScript</span>
-                <span class="skill-badge">React</span>
-                <span class="skill-badge">Node.js</span>
-                <span class="skill-badge">Python</span>
+                <span class="skill-badge">C#</span>
                 <span class="skill-badge">Git</span>
-                <span class="skill-badge">Responsive Design</span>
+                <span class="skill-badge">HTML5</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Python</span>
             </div>
         </section>
 
         <section id="contact" class="mb-5">
             <h2 class="section-title">Contact</h2>
-            <p><i class="fas fa-envelope contact-icon"></i> your.email@example.com</p>
-            <p><i class="fas fa-phone contact-icon"></i> (123) 456-7890</p>
+            <p><i class="fas fa-envelope contact-icon"></i> supat.komkee@gmail.com</p>
+            <p><i class="fas fa-phone contact-icon"></i> 096-697-5516</p>
             <p><i class="fab fa-linkedin contact-icon"></i> <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
             <p><i class="fab fa-github contact-icon"></i> <a href="https://github.com/yourusername">github.com/yourusername</a></p>
         </section>
