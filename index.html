@@ -139,6 +139,129 @@
       height: 3px;
       background: var(--accent-color);
     }
+
+    /* Game-inspired background for the hero section */
+    #hero {
+      background: url('assets/img/pixel-background.png') repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Pixelated font for headings */
+    @font-face {
+      font-family: 'PixelFont';
+      src: url('assets/fonts/pixel-font.woff2') format('woff2');
+    }
+
+    h1, h2, h3, .sitename {
+      font-family: 'PixelFont', var(--heading-font);
+      text-transform: uppercase;
+    }
+
+    /* Game console inspired navigation */
+    .navmenu {
+      background: #000;
+      border: 2px solid #33ff33;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .navmenu a {
+      color: #33ff33;
+      text-shadow: 0 0 5px #33ff33;
+      transition: all 0.3s ease;
+    }
+
+    .navmenu a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #33ff33;
+    }
+
+    /* Skill bars styled like health/mana bars in games */
+    .skills .progress-bar-wrap {
+      background-color: #333;
+      border: 2px solid #666;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .skills .progress-bar {
+      background-color: #33ff33;
+      box-shadow: 0 0 10px #33ff33;
+    }
+
+    /* Portfolio items with game cartridge style */
+    .portfolio .portfolio-wrap {
+      background: #333;
+      border: 3px solid #666;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .portfolio .portfolio-wrap:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(51, 255, 51, 0.3);
+    }
+
+    .portfolio .portfolio-info {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Add a retro CRT screen effect to the entire page */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+      );
+      background-size: 100% 4px;
+      z-index: 1000;
+      pointer-events: none;
+      opacity: 0.1;
+    }
+
+    /* Animate the hero text like a game intro */
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .hero h2 {
+      overflow: hidden;
+      border-right: 0.15em solid #33ff33;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: 
+        typewriter 4s steps(40, end) 1s 1 normal both,
+        blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #33ff33; }
+    }
   </style>
 </head>
 
@@ -182,7 +305,7 @@
       <img src="assets/img/Game_Dev.jpeg" alt="" data-aos="fade-in" class="img-fluid">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-center">Suphat Khamkhi</h2>
-        <p class="text-center">I'm a <span class="typed" data-typed-items="Unity Developer, UnrealEngine 5 Developer, Videographer"></span></p>
+        <p class="text-center">Level Up Your Game With <span class="typed" data-typed-items="Unity Developer, UnrealEngine 5 Developer, Videographer"></span></p>
       </div>
     </section><!-- /Hero Section -->
 
@@ -209,9 +332,9 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Specialization:</strong> <span>3D Game Development and 2D Game Development</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Engine:</strong> <span>Unity, Unreal Engine</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chiang Mai, Thailand</span></li>
+                  <li><i class="bi bi-controller"></i> <strong>Specialization:</strong> <span>3D Game Development and 2D Game Development</span></li>
+                  <li><i class="bi bi-cpu"></i> <strong>Engine:</strong> <span>Unity, Unreal Engine</span></li>
+                  <li><i class="bi bi-geo-alt"></i> <strong>City:</strong> <span>Chiang Mai, Thailand</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
