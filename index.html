@@ -34,6 +34,30 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <!-- Add this custom CSS to the existing styles -->
+  <style>
+    @media (max-width: 768px) {
+      .profile-img img {
+        max-width: 150px;
+      }
+      .social-links {
+        margin-top: 1rem;
+      }
+      .navmenu {
+        margin-top: 1rem;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero .typed {
+        font-size: 1.5rem;
+      }
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -41,7 +65,7 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <div class="profile-img">
+    <div class="profile-img text-center">
       <img src="assets/img/Profile.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
@@ -57,13 +81,12 @@
     </div>
 
     <nav id="navmenu" class="navmenu">
-      <ul>
+      <ul class="list-unstyled">
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#skills"><i class="bi bi-code-slash navicon"></i> Skills</a></li>
         <li><a href="#portfolio"><i class="bi bi-controller navicon"></i> Games</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
@@ -74,14 +97,11 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/game-dev-hero.jpg" alt="" data-aos="fade-in" class="">
-
+      <img src="assets/img/game-dev-hero.jpg" alt="" data-aos="fade-in" class="img-fluid">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Suphat Khamkhi</h2>
-        <p>I'm a <span class="typed" data-typed-items="Unity Developer, UnrealEngine 5 Developer, Videographer">Game Developer</span></p>
+        <h2 class="text-center">Suphat Khamkhi</h2>
+        <p class="text-center">I'm a <span class="typed" data-typed-items="Unity Developer, UnrealEngine 5 Developer, Videographer"></span></p>
       </div>
-
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
